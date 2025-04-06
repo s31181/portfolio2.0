@@ -91,3 +91,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Ensure that the Next.js image optimization is handled correctly
+          # by setting the appropriate environment variable.
+          env:
+            NEXT_IMAGE_UNOPTIMIZED: true
