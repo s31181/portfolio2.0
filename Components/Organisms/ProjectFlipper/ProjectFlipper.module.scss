@@ -136,6 +136,23 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+
+    button {
+        background-color: transparent;
+        // border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 1rem;
+        margin: 0;
+
+        &[aria-label="Previous"] {
+            transform: rotate(-135deg) translate(1px, 2px);
+        }
+
+        &[aria-label="Next"] {
+            transform: rotate(45deg);
+        }
+    }
 }
 
 @keyframes flip {

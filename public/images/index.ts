@@ -1,5 +1,5 @@
 // Images
-export { default as Portrait } from './portrait.jpeg';
+export { default as Portrait } from './portrait.jpg';
 export { default as Star } from './star.png';
 export { default as Star2 } from './star-2.png';
 export { default as Code } from './code.png';

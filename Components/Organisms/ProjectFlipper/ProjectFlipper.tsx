@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./ProjectFlipper.module.scss";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
-
+import { Arrow } from "@images";
 interface Project {
     image: string | StaticImageData;
     title: string;
@@ -62,15 +62,17 @@ export const ProjectFlipper = ({ projects }: ProjectFlipperProps) => {
                     className={styles.pagination__button}
                     onClick={handlePreviousClick}
                     disabled={isFlipping}
+                    aria-label="Previous"
                 >
-                    Previous
+                    <Image src={Arrow} alt="Previous" />
                 </button>
                 <button
                     className={styles.pagination__button}
                     onClick={handleNextClick}
                     disabled={isFlipping}
+                    aria-label="Next"
                 >
-                    Next
+                    <Image src={Arrow} alt="Next" />
                 </button>
             </div>
 
