@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Playfair_Display } from "next/font/google";
+import { Marcellus, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import "../styles/main.scss";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   weight: "400",
+  subsets: ["latin", "latin-ext"],
 });
 
-// const marcellus = Marcellus({
-//   variable: "--font-marcellus",
-//   subsets: ["latin"],
-//   weight: "400"
-// });
+const marcellus = Marcellus({
+  variable: "--font-marcellus",
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Rob Caluza - Frontend Developer",
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairDisplay.variable}`}>
+      <body className={`${playfairDisplay.variable} ${marcellus.variable}`}>
         {children}
       </body>
     </html>
