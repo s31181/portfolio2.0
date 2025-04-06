@@ -18,7 +18,7 @@ export const Hero = () => {
                     <Image className={styles.star2} src={Star2} alt="Star" width={79} height={76} />
                 </div>
                 <div className={classNames([styles.imageWrapper, styles["box-2"]])}>
-                    <Image src={Portrait} alt="Portrait" fill priority objectFit="cover" />
+                    <Image src={Portrait} alt="Portrait" fill priority objectFit="cover" sizes="(max-width: 550px) 320px, 1100px" />
                 </div>
                 <div className={styles["box-3"]}>
                     <Image className={styles.shimmer} src={Shimmer} alt="Shimmer" width={78} height={78} />
