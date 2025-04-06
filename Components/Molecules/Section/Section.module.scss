@@ -1,0 +1,25 @@
+.section {
+    width: 100%;
+    min-height: 100vh;
+    scroll-snap-align: start;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: left;
+        align-self: flex-start;
+        margin-right: auto;
+
+        margin-bottom: 10rem;
+    }
+}

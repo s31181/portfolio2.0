@@ -1,0 +1,33 @@
+// Colors
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$accent-color: #f0f0f0;
+
+// Typography
+$font-primary: var(--font-playfair-display);
+$font-secondary: var(--font-marcellus);
+$font-tertiary: var(--font-georgia);
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+// Breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1023px;
+$breakpoint-desktop: 1024px;
+
+// Transitions
+$transition-default: all 0.3s ease;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
