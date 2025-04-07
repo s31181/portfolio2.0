@@ -167,6 +167,7 @@
             .imageWrapper {
                 max-width: 70vw;
                 transform: rotate(10deg) scale(1);
+                overflow: hidden;
             }
 
             img {
