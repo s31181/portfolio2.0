@@ -1,3 +1,5 @@
+@use '../../../styles/utils/index' as *;
+
 .projectFlipper {
     display: flex;
     flex-direction: column;
@@ -36,7 +38,9 @@
     &[data-active="true"] {
 
         .project__info {
-            display: grid;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -44,7 +48,7 @@
     &__image {
         position: relative;
         aspect-ratio: 1161/716;
-        max-width: 45vw;
+        width: 45vw;
         z-index: -1;
         background-color: #D9D9D9;
         border: 6px solid #D9D9D9;
@@ -64,10 +68,15 @@
     }
 
     &__info {
-        width: 100%;
         display: grid;
         grid-template-columns: subgrid;
         grid-template-rows: repeat(3, 1fr);
+        font-family: $font-secondary;
+
+        p,
+        a {
+            margin-top: 1rem;
+        }
 
         @media (max-width: 768px) {
             margin-top: 2rem;
@@ -95,6 +104,14 @@
         display: flex;
         flex-direction: column;
     }
+
+    &__tags {
+        margin-top: auto;
+        align-self: flex-end;
+        flex-wrap: wrap;
+        display: flex;
+        gap: .5rem;
+    }
 }
 
 .project__container {
@@ -103,8 +120,8 @@
     flex-direction: column;
     max-width: 90vw;
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1rem;
+    grid-template-columns: 3fr 1fr;
+    gap: 4rem;
     height: fit-content;
 
     @media (max-width: 768px) {
@@ -139,11 +156,39 @@
 
     button {
         background-color: transparent;
-        // border: none;
+        border: 2px solid rgba(0, 0, 0, 1);
         border-radius: 50%;
         cursor: pointer;
-        padding: 1rem;
+        height: 3rem;
+        width: 3rem;
         margin: 0;
+
+        img {
+            transition: all .2s ease-out;
+        }
+
+        &:disabled {
+            border-color: rgba(0, 0, 0, .3);
+
+            img {
+                opacity: .3;
+            }
+        }
+
+        &:focus,
+        &:focus-within,
+        &:focus-visible {
+            outline: 2px solid #39FF14;
+        }
+
+        &:hover:not(:disabled) {
+            border-color: rgba(0, 0, 0, .5);
+
+            img {
+                transform: scale(1.1);
+                opacity: .8;
+            }
+        }
 
         &[aria-label="Previous"] {
             transform: rotate(-135deg) translate(1px, 2px);

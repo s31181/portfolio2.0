@@ -1,21 +1,24 @@
 'use client'
 import Image, { StaticImageData } from "next/image";
 import styles from "./ProjectFlipper.module.scss";
-import { useEffect, useRef } from "react";
+import { JSX, useEffect, useRef } from "react";
 import { useState } from "react";
 import { Arrow } from "@images";
+import { Tag } from "../../Atoms";
+import Link from "next/link";
 interface Project {
     image: string | StaticImageData;
     title: string;
     description: string;
     link?: string;
+    tags?: string[];
 }
 
 interface ProjectFlipperProps {
     projects: Project[];
 }
 
-export const ProjectFlipper = ({ projects }: ProjectFlipperProps) => {
+export const ProjectFlipper = ({ projects }: ProjectFlipperProps): JSX.Element => {
     const flipContainerRef = useRef<HTMLDivElement | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
     const [isFlipping, setIsFlipping] = useState(false);
@@ -52,7 +55,12 @@ export const ProjectFlipper = ({ projects }: ProjectFlipperProps) => {
                         <div className={styles.project__info}>
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
-                            {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>}
+                            {project.link && <Link href={project.link} target="_blank" rel="noopener noreferrer" prefetch={true}>View Project</Link>}
+                            {project.tags && <div className={styles.project__tags}>
+                                {project.tags.map((tag) => (
+                                    <Tag key={tag}>{tag}</Tag>
+                                ))}
+                            </div>}
                         </div>
                     </article>
                 ))}
