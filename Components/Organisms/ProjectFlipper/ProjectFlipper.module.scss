@@ -128,13 +128,15 @@
     gap: 4rem;
     height: fit-content;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-    }
-
     inline-size: min(65vw, 100%);
     margin: 0 auto;
     padding: 3rem 0;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        inline-size: 95%;
+    }
 
 
 
