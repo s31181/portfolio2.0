@@ -80,7 +80,7 @@ export default function Home() {
         <div className="imageWrapper">
           <Image src={Code} alt="Code" fill objectFit="cover" />
         </div>
-        <p>A curated selection of projects I've contributed to over the years—each one a reflection of my growth, skills, and passion for impactful web experiences.</p>
+        <p>A curated selection of projects I&apos;ve contributed to over the years—each one a reflection of my growth, skills, and passion for impactful web experiences.</p>
         <ProjectFlipper projects={projects} />
       </Section>
     </main>
