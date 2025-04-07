@@ -57,6 +57,11 @@
             overflow: hidden;
             transform: rotate(10deg) translateX(25%);
 
+            img {
+                will-change: transform;
+                backface-visibility: hidden;
+            }
+
             @media (max-width: 550px) {
                 height: fit-content;
                 transform: scale(.5);
@@ -64,6 +69,8 @@
                 img {
                     border-radius: 265.5px;
                     transform: scale(1.8) rotate(10deg) translate(15%, 8%);
+                    will-change: transform;
+                    backface-visibility: hidden;
                 }
             }
         }
@@ -166,6 +173,7 @@
             }
 
             .imageWrapper {
+                position: relative;
                 width: 70vw;
                 transform: rotate(10deg) scale(1);
                 overflow: hidden;

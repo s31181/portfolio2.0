@@ -67,6 +67,14 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Section className={"projects"} id="projects">
+        <h2 >Selected Projects</h2>
+        <div className="imageWrapper">
+          <Image src={Code} alt="Code" fill objectFit="cover" />
+        </div>
+        <p>A curated selection of projects I&apos;ve contributed to over the years—each one a reflection of my growth, skills, and passion for impactful web experiences.</p>
+        <ProjectFlipper projects={projects} />
+      </Section>
       <Section className={"about-me"}>
         <h2 id="about-me">About Me</h2>
         <Quote>
@@ -75,14 +83,6 @@ export default function Home() {
           </p>
         </Quote>
         <StatBox stats={stats} />
-      </Section>
-      <Section className={"projects"} id="projects">
-        <h2 >Selected Projects</h2>
-        <div className="imageWrapper">
-          <Image src={Code} alt="Code" fill objectFit="cover" />
-        </div>
-        <p>A curated selection of projects I&apos;ve contributed to over the years—each one a reflection of my growth, skills, and passion for impactful web experiences.</p>
-        <ProjectFlipper projects={projects} />
       </Section>
     </main>
   );
