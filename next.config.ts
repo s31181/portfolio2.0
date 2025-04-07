@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)', // Apply to all routes
+        source: '/(.*)', // apply to all routes
         headers: [
           {
             key: 'X-Robots-Tag',
