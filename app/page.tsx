@@ -3,6 +3,7 @@ import { Hero, Quote, Section, StatBox, ProjectFlipper } from "@components";
 import { Code, CSS3, Figma, HTML5, JavaScript, ReactImg, TypeScript } from "@images";
 import Image from "next/image";
 import { Ags, Chandelier, Garden, Rawcut } from '@images';
+
 export default function Home() {
   const stats = [
     {

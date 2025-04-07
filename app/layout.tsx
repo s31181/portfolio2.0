@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Marcellus, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import "../styles/main.scss";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -34,6 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${playfairDisplay.variable} ${marcellus.variable}`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
