@@ -16,3 +16,5 @@ export { default as JavaScript } from './js.svg';
 export { default as ReactImg } from './react.svg';
 export { default as TypeScript } from './typescript.svg';
 export { default as Arrow } from './arrow.svg';
+export { default as Logo } from './logo.svg';
+export { default as LogoWhite } from './logo--white.svg';
