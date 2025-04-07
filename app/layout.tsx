@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Rob Caluza - Frontend Developer",
   description: "I'm a frontend developer with a passion for creating beautiful and functional websites.",
   viewport: "width=device-width, initial-scale=1.0",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
