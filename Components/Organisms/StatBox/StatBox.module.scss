@@ -10,4 +10,8 @@
     &:is(:not(:first-child)) {
         margin-top: 4rem;
     }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }

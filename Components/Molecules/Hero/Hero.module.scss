@@ -62,6 +62,7 @@
                 transform: scale(.5);
 
                 img {
+                    border-radius: 265.5px;
                     transform: scale(1.8) rotate(10deg) translate(15%, 8%);
                 }
             }
@@ -160,18 +161,18 @@
         .level2 {
             margin: 0 10%;
 
-            .box-2 {
+            &.box-2 {
                 margin: 0 auto;
             }
 
             .imageWrapper {
-                max-width: 70vw;
+                width: 70vw;
                 transform: rotate(10deg) scale(1);
                 overflow: hidden;
-            }
 
-            img {
-                max-width: 100%;
+                img {
+                    width: 70vw;
+                }
             }
         }
     }
